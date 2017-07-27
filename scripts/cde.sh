@@ -4,4 +4,7 @@ cd ~/Codes/$1
 ls
 echo 'Enter path'
 read -e path
-cd $path
+if [ -n "$path" ]
+then
+  cd $path
+fi
