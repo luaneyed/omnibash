@@ -7,5 +7,5 @@ then
 else
   cr=$cr1
 fi
-open -a "$cr" "https://www.youtube.com/results?search_query=$1"
+open -a "$cr" "https://www.youtube.com/results?search_query=$*"
 exit 0
