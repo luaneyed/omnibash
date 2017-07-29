@@ -1,5 +1,9 @@
 # awesome-scripts #
 
+### Requirements ###
+macOS
+
+### Setting ###
 Add following lines to .bash_profile
 ```
 export SCRIPTS_PATH=[PATH TO YOUR CLONE]  
