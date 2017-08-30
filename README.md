@@ -3,14 +3,10 @@
 ### Requirements ###
 macOS
 
-### Setting ###
-Add following lines to .bash_profile
+### Easy Installation ###
 ```
-export SCRIPTS_PATH=[PATH TO YOUR CLONE]  
-source $SCRIPTS_PATH'aliases';
+~ % git clone https://github.com/sangguk2/awesome-scripts.git
+~ % cd awesome-scripts
+~awesome-scripts % . init.sh
 ```
-You must **not** change the name of variable 'SCRIPTS_PATH' because it is referenced in scripts
-
-SCRIPTS_PATH must equal to the path of your clone.
-
-ex) export SCRIPTS_PATH=$HOME'/awesome-scripts/'
+You must **not** edit auto generated lines in ~/.bash_profile
