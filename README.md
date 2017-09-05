@@ -6,8 +6,7 @@
 
 ### Easy Installation ###
 ```
-~ % git clone https://github.com/sangguk2/omnibash.git
-~ % cd omnibash
-~omnibash % . init.sh
+$ git clone https://github.com/sangguk2/omnibash.git
+$ . omnibash/init.sh
 ```
-You must **not** edit auto generated lines in ~/.bash_profile
+You must **not** edit the auto generated line in ~/.bash_profile
