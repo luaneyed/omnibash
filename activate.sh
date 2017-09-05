@@ -1,4 +1,5 @@
 alias c='clear'
+alias cl='. '$OMNIBASH_PATH'/scripts/cl.sh'
 
 alias cde='. '$OMNIBASH_PATH'/scripts/cde.sh'
 alias yt='. '$OMNIBASH_PATH'/scripts/ytb.sh'
