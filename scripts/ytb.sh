@@ -1,3 +1,3 @@
 #!/bin/bash
-python $SCRIPTS_PATH'scripts/ytb.py' $*
+python $OMNIBASH_PATH'/scripts/ytb.py' $*
 exit 0

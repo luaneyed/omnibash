@@ -1,4 +1,4 @@
-source $SCRIPTS_PATH/git/.git-completion.sh
+source $OMNIBASH_PATH/git/.git-completion.sh
 
 alias ga='git add -A'
 __git_complete ga _git_add
