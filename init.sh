@@ -10,6 +10,6 @@ echo "export SCRIPTS_PATH='$DIR'" >> $OMNIBASH
 echo "source $""SCRIPTS_PATH'activate.sh';" >> $OMNIBASH
 
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash\
-    -o $DIR'git/.git-completion.sh'
+    -o $SCRIPTS_PATH'git/.git-completion.sh'
 
 source $BASH_PROFILE
