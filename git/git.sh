@@ -12,6 +12,9 @@ __git_complete gbv _git_branch
 alias gc='git commit'
 __git_complete gc _git_commit
 
+alias gcm='git commit -m'
+__git_complete gc _git_commit
+
 alias gck='git checkout'
 __git_complete gck _git_checkout
 
