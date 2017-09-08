@@ -48,6 +48,9 @@ __git_complete gl6 _git_log
 alias gm='git merge'
 __git_complete gm _git_merge
 
+alias gmm='git merge master'
+__git_complete gmm _git_merge
+
 alias gmt='git mergetool'
 __git_complete gmt _git_mergetool
 
