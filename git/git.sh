@@ -54,6 +54,9 @@ __git_complete gmt _git_mergetool
 alias gp='git pull'
 __git_complete gp _git_pull
 
+alias gpoh='git push origin HEAD'
+__git_complete gpoh _git_push
+
 alias gr='git rebase'
 __git_complete gr _git_rebase
 
