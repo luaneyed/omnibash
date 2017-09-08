@@ -18,6 +18,9 @@ __git_complete gc _git_commit
 alias gck='git checkout'
 __git_complete gck _git_checkout
 
+alias gckm='git checkout master'
+__git_complete gckm _git_checkout
+
 alias gd='git diff'
 __git_complete gd _git_diff
 
