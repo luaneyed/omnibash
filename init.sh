@@ -9,7 +9,6 @@ then
     rm $OMNIBASH
 fi
 
-echo "source $""HOME/.omnibash" >> $BASH_PROFILE
 echo "export OMNIBASH_PATH='$DIR'" >> $OMNIBASH
 echo "source $""OMNIBASH_PATH'/activate.sh';" >> $OMNIBASH
 
@@ -20,5 +19,15 @@ install_git_completion ()
         -o $DIR'/git/.git-completion.sh'
 }
 install_git_completion
+
+add_source_to_bash_profile ()
+{
+    local source_string="source $""HOME/.omnibash"
+    if ! grep -Fxq "$source_string" $BASH_PROFILE
+    then
+        echo $source_string >> $BASH_PROFILE
+    fi
+}
+add_source_to_bash_profile
 
 source $BASH_PROFILE
