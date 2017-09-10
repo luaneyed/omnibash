@@ -4,7 +4,11 @@ OMNIBASH="$HOME/.omnibash"
 BASH_PROFILE="$HOME/.bash_profile"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-rm $OMNIBASH
+if [ -f $OMNIBASH ]
+then
+    rm $OMNIBASH
+fi
+
 echo "source $""HOME/.omnibash" >> $BASH_PROFILE
 echo "export OMNIBASH_PATH='$DIR'" >> $OMNIBASH
 echo "source $""OMNIBASH_PATH'/activate.sh';" >> $OMNIBASH
