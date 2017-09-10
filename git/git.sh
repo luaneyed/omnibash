@@ -78,4 +78,13 @@ __git_complete gs _git_status
 alias gsm='git submodule'
 __git_complete gsm _git_submodule
 
+_git_submodule_update ()
+{
+    __gitcomp "
+        --init --remote --no-fetch
+        --recommend-shallow --no-recommend-shallow
+        --force --rebase --merge --reference --depth --recursive --jobs
+    "
+}
 alias gsmu='git submodule update'
+__git_complete gsmu _git_submodule_update
