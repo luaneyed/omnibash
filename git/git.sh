@@ -63,5 +63,7 @@ __git_complete gri _git_rebase
 alias gs='git status'
 __git_complete gs _git_status
 
-alias gu='git submodule update'
-__git_complete gu _git_submodule
+alias gsm='git submodule'
+__git_complete gsm _git_submodule
+
+alias gsmu='git submodule update'
