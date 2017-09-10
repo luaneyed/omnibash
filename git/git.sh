@@ -88,3 +88,6 @@ _git_submodule_update ()
 }
 alias gsmu='git submodule update'
 __git_complete gsmu _git_submodule_update
+
+alias gsmur='git submodule update --recursive'
+__git_complete gsmur _git_submodule_update
