@@ -1,6 +1,6 @@
 # Omnibash #
 
-### Requirement ###
+### Requirements ###
 - bash
 - fingers or toes
 
