@@ -7,15 +7,15 @@ __is_status_clean ()
 
 with_user_color="\[\033[38;5;45m\]"
 with_path_color="\[\033[38;5;87m\]"
+with_clean_branch_color="\[\033[38;5;228m\]"
+with_dirty_branch_color="\[\033[0;92m\]"
 with_branch_color='$(\
     __is_status_clean;\
     if [ $? -eq 0 ];\
     then\
-        #   dirty branch color
-        echo "\[\033[0;92m\]";\
+        echo "'$with_dirty_branch_color'";\
     else\
-        #   clean branch color
-        echo "\[\033[38;5;228m\]";\
+        echo "'$with_clean_branch_color'";\
     fi;\
 )'
 with_dollar_color="\[\033[38;5;40m\]"
