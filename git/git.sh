@@ -78,6 +78,9 @@ __git_complete gs _git_status
 alias gsm='git submodule'
 __git_complete gsm _git_submodule
 
+alias gst='git stash'
+__git_complete gst _git_stash
+
 _git_submodule_update ()
 {
     __gitcomp "
