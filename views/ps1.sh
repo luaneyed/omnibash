@@ -5,28 +5,51 @@ __is_status_clean ()
     echo `git status` | grep "nothing to commit" > /dev/null 2>&1;
 }
 
-with_user_color="\[\033[38;5;45m\]"
-with_path_color="\[\033[38;5;87m\]"
-with_clean_branch_color="\[\033[38;5;228m\]"
-with_dirty_branch_color="\[\033[0;92m\]"
+__set_user_color ()
+{
+    echo "\[\033[38;5;45m\]"
+}
+
+__set_path_color ()
+{
+    echo "\[\033[38;5;87m\]"
+}
+
+__set_dirty_branch_color ()
+{
+    echo "\[\033[38;5;228m\]"
+}
+
+__set_clean_branch_color ()
+{
+    echo "\[\033[0;92m\]"
+}
+
 with_branch_color='$(\
     __is_status_clean;\
     if [ $? -eq 0 ];\
     then\
-        echo "'$with_dirty_branch_color'";\
+        echo "'$(__set_clean_branch_color)'";\
     else\
-        echo "'$with_clean_branch_color'";\
-    fi;\
+        echo "'$(__set_dirty_branch_color)'";\
+    fi\
 )'
-with_dollar_color="\[\033[38;5;40m\]"
-with_default_color="\[\033[0m\]"
 
+__set_dollar_color ()
+{
+    echo "\[\033[38;5;40m\]"
+}
+
+__set_default_color ()
+{
+    echo "\[\033[0m\]"
+}
 __is_git_directory ()
 {
     git branch &> /dev/null
 }
 
-__print_current_branch ()
+__print_current_branch_name ()
 {
     local b="$(git symbolic-ref HEAD 2> /dev/null)";
     if [ -n "$b" ]; then
@@ -34,24 +57,25 @@ __print_current_branch ()
     fi
 }
 
+print_branch='$(echo '"$with_branch_color"'$(__print_current_branch_name))'
 
-print_user=$with_user_color'\u'
-print_colon=$with_default_color': '
-print_path=$with_path_color'\w'
+print_user=$(__set_user_color)'\u'
+print_colon=$(__set_default_color)': '
+path=$(__set_path_color)'\w'
 print_branch_if_git_directory='$(\
     __is_git_directory;\
     if [ $? -eq 0 ];\
     then\
-        echo "'$with_branch_color'"$(__print_current_branch);\
+        echo "'$print_branch'";\
     fi\
 )'
-print_dollar=$with_dollar_color' \$ '
-reset_color=$with_default_color
+print_dollar=$(__set_dollar_color)' \$ '
+reset_color=$(__set_default_color)
 
 export PS1=\
 $print_user\
 $print_colon\
-$print_path\
+$path\
 $print_branch_if_git_directory\
 $print_dollar\
 $reset_color
