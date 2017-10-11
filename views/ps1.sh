@@ -72,10 +72,25 @@ print_branch_if_git_directory='$(\
 print_dollar=$(__set_dollar_color)' \$ '
 reset_color=$(__set_default_color)
 
-export PS1=\
+
+original_ps1=$PS1;
+
+ps1=\
 $print_user\
 $print_colon\
 $path\
 $print_branch_if_git_directory\
 $print_dollar\
-$reset_color
+$reset_color;
+
+
+echo_ps1_if_user_opened_bash='$(\
+    if [ "$(whoami)" == "'$(whoami)'" ];\
+    then\
+        echo "'$ps1'";\
+    else\
+        echo "'$original_ps1'";\
+    fi;\
+)'
+
+export PS1=$echo_ps1_if_user_opened_bash;
