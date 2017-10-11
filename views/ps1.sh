@@ -1,53 +1,30 @@
 #!/bin/bash
 
-__is_status_clean ()
-{
-    echo "echo ""\`git status\`"" | grep \"nothing to commit\" > /dev/null 2>&1;"
-}
+is_status_clean="echo ""\`git status\`"" | grep \"nothing to commit\" > /dev/null 2>&1;";
 
-__set_user_color ()
-{
-    echo "\[\033[38;5;45m\]"
-}
+set_default_color="\[\033[0m\]";
 
-__set_path_color ()
-{
-    echo "\[\033[38;5;87m\]"
-}
+set_user_color="\[\033[38;5;45m\]"
 
-__set_dirty_branch_color ()
-{
-    echo "\[\033[38;5;228m\]"
-}
+set_path_color="\[\033[38;5;87m\]";
 
-__set_clean_branch_color ()
-{
-    echo "\[\033[0;92m\]"
-}
+set_dirty_branch_color="\[\033[38;5;228m\]";
+
+set_clean_branch_color="\[\033[0;92m\]";
 
 with_branch_color='$(\
-    '$(__is_status_clean)'\
+    '$is_status_clean'\
     if [ $? -eq 0 ];\
     then\
-        echo "'$(__set_clean_branch_color)'";\
+        echo "'$set_clean_branch_color'";\
     else\
-        echo "'$(__set_dirty_branch_color)'";\
+        echo "'$set_dirty_branch_color'";\
     fi\
 )'
 
-__set_dollar_color ()
-{
-    echo "\[\033[38;5;40m\]"
-}
+set_dollar_color="\[\033[38;5;40m\]";
 
-__set_default_color ()
-{
-    echo "\[\033[0m\]"
-}
-__is_git_directory ()
-{
-    echo "git branch &> /dev/null"
-}
+is_git_directory="git branch &> /dev/null";
 
 current_branch_name='$(\
     b=$(git symbolic-ref HEAD 2> /dev/null);\
@@ -59,18 +36,23 @@ current_branch_name='$(\
 
 print_branch='$(echo '"$with_branch_color"''"$current_branch_name"')'
 
-print_user=$(__set_user_color)'\u'
-print_colon=$(__set_default_color)': '
-path=$(__set_path_color)'\w'
+print_user=$set_user_color'\u'
+
+print_colon=$set_default_color': '
+
+path=$set_path_color'\w'
+
 print_branch_if_git_directory='$(\
-    '$(__is_git_directory)';\
+    '$is_git_directory';\
     if [ $? -eq 0 ];\
     then\
         echo "'$print_branch'";\
     fi\
 )'
-print_dollar=$(__set_dollar_color)' \$ '
-reset_color=$(__set_default_color)
+
+print_dollar=$set_dollar_color' \$ '
+
+reset_color=$set_default_color
 
 
 original_ps1=$PS1;
