@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#   private function
-#   for limiting scope of variables
-__echo_ps1 ()
+register_ps1 ()
 {
     is_status_clean="echo ""\`git status\`"" | grep \"nothing to commit\" > /dev/null 2>&1;";
 
@@ -78,7 +76,7 @@ $reset_color;
         fi;\
     )'
 
-    echo "$echo_ps1_if_user_opened_bash"
+    export PS1=$echo_ps1_if_user_opened_bash
 }
-
-export PS1=$(__echo_ps1);
+register_ps1
+unset register_ps1
