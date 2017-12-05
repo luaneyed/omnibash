@@ -1,12 +1,19 @@
 alias c='clear'
-alias cl='. '$OMNIBASH_PATH'/scripts/cl.sh'
 alias cdp='cd ..'
-alias cdpl='. '$OMNIBASH_PATH'/scripts/cdpl.sh'
 
-alias cde='. '$OMNIBASH_PATH'/scripts/cde.sh'
-alias pjs='. '$OMNIBASH_PATH'/scripts/pjs.sh'
-alias yt='. '$OMNIBASH_PATH'/scripts/ytb.sh'
-alias wtr='. '$OMNIBASH_PATH'/scripts/weather.sh'
+add_script_to_alias()
+{
+    alias $1='. '$OMNIBASH_PATH'/scripts/'$1'.sh'
+}
+
+add_script_to_alias cl
+add_script_to_alias cdpl
+add_script_to_alias cde
+add_script_to_alias pjs
+add_script_to_alias ytb
+add_script_to_alias weather
+
+unset add_script_to_alias
 
 source $OMNIBASH_PATH'/views/ps1.sh'
 source $OMNIBASH_PATH'/git/git.sh'
