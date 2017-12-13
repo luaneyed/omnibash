@@ -1,5 +1,6 @@
 alias c='clear'
 alias cdp='cd ..'
+alias yr='yarn run'
 
 add_script_to_alias()
 {
