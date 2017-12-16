@@ -10,6 +10,8 @@ add_script_to_alias()
 add_script_to_alias cl
 add_script_to_alias cdpl
 add_script_to_alias cde
+add_script_to_alias dec
+add_script_to_alias enc
 add_script_to_alias pjs
 add_script_to_alias ytb
 add_script_to_alias weather
