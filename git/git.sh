@@ -6,6 +6,18 @@ __git_complete ga _git_add
 alias gb='git branch'
 __git_complete gb _git_branch
 
+alias gbr="git for-each-ref --sort=committerdate refs/heads/ --format="\
+"'%(HEAD) %(color: dim white)%(objectname:short)%(color:reset) | %(color:yellow)%(refname:short)%(color:reset) "\
+"%(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+
+alias gbh="git for-each-ref --sort=committerdate refs/heads/ --format="\
+"'%(HEAD) %(color: dim white)%(objectname:short)%(color:reset) | %(color:yellow)%(refname:short)%(color:reset) "\
+"(%(color:green)%(committerdate:relative)%(color:reset))'"
+
+alias gbm="git for-each-ref --sort=committerdate refs/heads/ --format="\
+"'%(HEAD) %(color:yellow)%(refname:short)%(color:reset) %(contents:subject) "\
+"(%(color:green)%(committerdate:relative)%(color:reset))'"
+
 alias gbv='git branch -vv'
 __git_complete gbv _git_branch
 
