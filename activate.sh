@@ -1,5 +1,6 @@
 alias c='clear'
 alias cdp='cd ..'
+alias cd-='cd $OLDPWD'
 alias ya='yarn add'
 alias yr='yarn run'
 
