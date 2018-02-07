@@ -41,6 +41,9 @@ __git_complete gd _git_diff
 alias gdh='git diff HEAD'
 __git_complete gdh _git_diff
 
+alias gdm='git diff master'
+__git_complete gdm _git_diff
+
 alias gf='git fetch'
 __git_complete gf _git_fetch
 
