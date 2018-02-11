@@ -2898,6 +2898,12 @@ _git_stash ()
 	fi
 }
 
+__git_submodule_update_options="
+			--init --remote --no-fetch
+			--recommend-shallow --no-recommend-shallow
+			--force --rebase --merge --reference --depth --recursive --jobs
+		"
+
 _git_submodule ()
 {
 	__git_has_doubledash && return
@@ -2927,11 +2933,7 @@ _git_submodule ()
 		__gitcomp "--force --all"
 		;;
 	update,--*)
-		__gitcomp "
-			--init --remote --no-fetch
-			--recommend-shallow --no-recommend-shallow
-			--force --rebase --merge --reference --depth --recursive --jobs
-		"
+		__gitcomp "$__git_submodule_update_options"
 		;;
 	summary,--*)
 		__gitcomp "--cached --files --summary-limit"

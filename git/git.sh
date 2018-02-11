@@ -103,11 +103,7 @@ __git_complete gst _git_stash
 
 _git_submodule_update ()
 {
-    __gitcomp "
-        --init --remote --no-fetch
-        --recommend-shallow --no-recommend-shallow
-        --force --rebase --merge --reference --depth --recursive --jobs
-    "
+    __gitcomp "$__git_submodule_update_options"
 }
 alias gsmu='git submodule update'
 __git_complete gsmu _git_submodule_update
