@@ -33,11 +33,20 @@ __git_complete gc _git_commit
 alias gck='git checkout'
 __git_complete gck _git_checkout
 
+alias gckr='git checkout --recurse-submodules'
+__git_complete gckr _git_checkout
+
 alias gck-='git checkout -'
 __git_complete gck- _git_checkout
 
+alias gck-r='git checkout - --recurse-submodules'
+__git_complete gck-r _git_checkout
+
 alias gckm='git checkout master'
 __git_complete gckm _git_checkout
+
+alias gckmr='git checkout master --recurse-submodules'
+__git_complete gckmr _git_checkout
 
 alias gd='git diff'
 __git_complete gd _git_diff
