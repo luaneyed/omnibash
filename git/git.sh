@@ -34,6 +34,7 @@ alias gck='git checkout'
 __git_complete gck _git_checkout
 
 alias gck-='git checkout -'
+__git_complete gck- _git_checkout
 
 alias gckm='git checkout master'
 __git_complete gckm _git_checkout
