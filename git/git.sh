@@ -3,6 +3,9 @@ source $OMNIBASH_PATH/git/.git-completion.sh
 alias ga='git add -A'
 __git_complete ga _git_add
 
+alias gap='git add -p'
+__git_complete gap _git_add
+
 alias gb='git branch'
 __git_complete gb _git_branch
 
