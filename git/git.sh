@@ -50,6 +50,9 @@ __git_complete gdm _git_diff
 alias gdmn='git diff master --name-only'
 __git_complete gdmn _git_diff
 
+alias gds='git diff --staged'
+__git_complete gds _git_diff
+
 alias gf='git fetch'
 __git_complete gf _git_fetch
 
