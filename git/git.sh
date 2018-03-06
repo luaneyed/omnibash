@@ -95,6 +95,9 @@ __git_complete gri _git_rebase
 alias gs='git status'
 __git_complete gs _git_status
 
+alias gsh='git show'
+__git_complete gsh _git_show
+
 alias gsm='git submodule'
 __git_complete gsm _git_submodule
 
