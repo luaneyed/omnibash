@@ -21,4 +21,5 @@ add_script_to_alias weather
 unset add_script_to_alias
 
 source $OMNIBASH_PATH'/views/ps1.sh'
+source $OMNIBASH_PATH'/views/color.sh'
 source $OMNIBASH_PATH'/git/git.sh'
