@@ -111,6 +111,8 @@ __git_complete gsm _git_submodule
 alias gst='git stash'
 __git_complete gst _git_stash
 
+alias gstl='git stash list'
+
 _git_submodule_update ()
 {
     __gitcomp "$__git_submodule_update_options"
