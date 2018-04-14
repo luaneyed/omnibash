@@ -2,6 +2,8 @@ alias c='clear'
 alias cdp='cd ..'
 alias cd-='cd $OLDPWD'
 alias fz='$(fzf)'
+alias py='python3'
+alias py2='python'
 alias ya='yarn add'
 alias yr='yarn run'
 
