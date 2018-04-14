@@ -2,7 +2,7 @@
 
 original_pwd=$PWD
 
-cd ~/Codes/$1
+cd ~/Code/$1
 ls
 echo 'Enter path'
 read -e path
