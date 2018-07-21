@@ -2,6 +2,16 @@
 
 register_ps1 ()
 {
+    is_in_git_internal='$(\
+        DIR="$(pwd)";\
+        if [[ $DIR = *"/.git/"* || $DIR = *"/.git" ]];\
+        then\
+            exit 0;
+        else\
+            exit 1;
+        fi;\
+    )';
+
     is_status_clean="echo \`git status\` | grep \"nothing to commit\" > /dev/null 2>&1;";
 
     set_default_color="\[\033[0m\]";
@@ -14,14 +24,22 @@ register_ps1 ()
 
     set_clean_branch_color="\[\033[0;92m\]";
 
+    set_unclear_branch_color="\[\033[38;5;249m\]";
+
     with_branch_color='$(\
-        '$is_status_clean'\
+        '$is_in_git_internal'
         if [ $? -eq 0 ];\
         then\
-            echo "'$set_clean_branch_color'";\
+            echo "'$set_unclear_branch_color'";\
         else\
-            echo "'$set_dirty_branch_color'";\
-        fi\
+            '$is_status_clean'\
+            if [ $? -eq 0 ];\
+            then\
+                echo "'$set_clean_branch_color'";\
+            else\
+                echo "'$set_dirty_branch_color'";\
+            fi;\
+        fi;\
     )'
 
     set_dollar_color="\[\033[38;5;40m\]";
