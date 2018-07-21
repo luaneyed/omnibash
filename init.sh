@@ -15,6 +15,12 @@ echo "source $""OMNIBASH_PATH'/activate.sh';" >> $OMNIBASH
 add_source_to_bash_profile ()
 {
     local source_string="source $""HOME/.omnibash"
+
+    if [ ! -f $BASH_PROFILE ]
+    then
+      touch $BASH_PROFILE
+    fi
+
     if ! grep -Fxq "$source_string" $BASH_PROFILE
     then
         echo $source_string >> $BASH_PROFILE
