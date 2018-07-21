@@ -2,7 +2,7 @@
 
 register_ps1 ()
 {
-    is_status_clean="echo ""\`git status\`"" | grep \"nothing to commit\" > /dev/null 2>&1;";
+    is_status_clean="echo \`git status\` | grep \"nothing to commit\" > /dev/null 2>&1;";
 
     set_default_color="\[\033[0m\]";
 
