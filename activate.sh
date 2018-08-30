@@ -1,6 +1,7 @@
 alias c='clear'
 alias cdp='cd ..'
 alias cd-='cd $OLDPWD'
+alias dc='docker-compose'
 alias dcu='docker-compose up'
 alias dcub='docker-compose up --build'
 alias dcd='docker-compose down'
