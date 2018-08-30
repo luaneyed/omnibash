@@ -9,6 +9,9 @@ __git_complete gap _git_add
 alias gb='git branch'
 __git_complete gb _git_branch
 
+alias gba='git branch -a'
+__git_complete gb _git_branch
+
 alias gbr="git for-each-ref --sort=committerdate refs/heads/ --format="\
 "'%(HEAD) %(color: dim white)%(objectname:short)%(color:reset) | %(color:yellow)%(refname:short)%(color:reset) "\
 "%(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
