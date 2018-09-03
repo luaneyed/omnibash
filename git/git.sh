@@ -102,6 +102,9 @@ __git_complete gr _git_rebase
 alias gri='git rebase --interactive'
 __git_complete gri _git_rebase
 
+alias grm='git rebase master'
+__git_complete gri _git_rebase
+
 alias gs='git status'
 __git_complete gs _git_status
 
