@@ -1,3 +1,4 @@
+alias b='bat'
 alias c='clear'
 alias cdp='cd ..'
 alias cd-='cd $OLDPWD'
