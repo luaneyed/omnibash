@@ -30,6 +30,8 @@ __git_complete gbv _git_branch
 alias gc='git commit'
 __git_complete gc _git_commit
 
+alias gcl='. '$OMNIBASH_PATH'/git/gcl.sh'
+
 alias gcm='git commit -m'
 __git_complete gc _git_commit
 
