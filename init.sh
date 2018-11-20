@@ -1,7 +1,6 @@
 #!/bin/bash
 
 OMNIBASH="$HOME/.omnibash"
-BASH_PROFILE="$HOME/.bash_profile"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if [ -f $OMNIBASH ]
@@ -12,22 +11,23 @@ fi
 echo "export OMNIBASH_PATH='$DIR'" >> $OMNIBASH
 echo "source $""OMNIBASH_PATH'/activate.sh';" >> $OMNIBASH
 
-add_source_to_bash_profile ()
+add_source ()
 {
     local source_string="source $""HOME/.omnibash"
 
-    if [ ! -f $BASH_PROFILE ]
+    if [ ! -f $1 ]
     then
-      touch $BASH_PROFILE
+      touch $1
     fi
 
-    if ! grep -Fxq "$source_string" $BASH_PROFILE
+    if ! grep -Fxq "$source_string" $1
     then
-        echo $source_string >> $BASH_PROFILE
+        echo $source_string >> $1
     fi
 }
-add_source_to_bash_profile
-unset add_source_to_bash_profile
+add_source "$HOME/.bash_profile"
+add_source "$HOME/.bashrc"
+unset add_source
 
 make_vimrc ()
 {
@@ -49,4 +49,4 @@ make_vimrc ()
 make_vimrc
 unset make_vimrc
 
-source $BASH_PROFILE
+source $OMNIBASH
