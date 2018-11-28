@@ -1,5 +1,4 @@
 alias b='bat'
-alias c='clear'
 alias cb='cargo build'
 alias cc='cargo check'
 alias cr='cargo run'
