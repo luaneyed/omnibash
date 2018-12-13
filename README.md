@@ -17,6 +17,6 @@ You must **not** edit the auto generated line in ~/.bash_profile
 - [git](https://git-scm.com/downloads)
 - [docker](https://docs.docker.com/install/#supported-platforms)
 - [docker-compose](https://docs.docker.com/compose/install/#install-compose)
-- [rust](https://www.rust-lang.org/install.html)
+- [rust](https://www.rust-lang.org/tools/install)
 - [python](https://www.python.org/downloads/)
 - [yarn](https://yarnpkg.com/en/docs/install)
