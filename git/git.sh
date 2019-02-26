@@ -98,6 +98,8 @@ __git_complete gp _git_pull
 alias gpoh='git push origin HEAD'
 __git_complete gpoh _git_push
 
+alias gpu='git push upstream'
+
 alias gr='git rebase'
 __git_complete gr _git_rebase
 
