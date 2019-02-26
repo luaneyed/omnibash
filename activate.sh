@@ -24,6 +24,8 @@ alias eg='e -alh --git --git-ignore'
 alias el='e -l'
 alias fz='$(fzf)'
 alias gt='GIT_TRACE=1'
+alias ni='npm install'
+alias nr='npm run'
 alias pe='pipenv'
 alias pei='pe install'
 alias peid='pei --dev'
@@ -56,3 +58,4 @@ export GPG_TTY=$(tty)
 source $OMNIBASH_PATH'/views/ps1.sh'
 source $OMNIBASH_PATH'/views/color.sh'
 source $OMNIBASH_PATH'/git/git.sh'
+
