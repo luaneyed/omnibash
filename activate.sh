@@ -36,6 +36,8 @@ alias peui='pe uninstall'
 alias py='python3'
 alias py2='python'
 alias ya='yarn add'
+alias yc='yarn check'
+alias yi='yarn install'
 alias yr='yarn run'
 
 add_script_to_alias()
