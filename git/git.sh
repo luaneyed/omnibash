@@ -83,6 +83,9 @@ __git_complete gl5 _git_log
 alias gl6='git log -6'
 __git_complete gl6 _git_log
 
+alias gl7='git log -7'
+__git_complete gl7 _git_log
+
 alias gm='git merge'
 __git_complete gm _git_merge
 
