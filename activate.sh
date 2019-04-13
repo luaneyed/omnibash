@@ -1,4 +1,3 @@
-alias b='bat'
 alias cb='cargo build'
 alias cc='cargo check'
 alias cr='cargo run'
@@ -17,11 +16,8 @@ alias di='docker images'
 alias dl='docker logs'
 alias dp='docker ps'
 alias dpa='docker ps -a'
-alias e='exa --group-directories-first'
 alias ea='e -a'
 alias eal='e -al'
-alias ef='e -alghHmuUiS --git'
-alias eg='e -alh --git --git-ignore'
 alias el='e -l'
 alias fz='$(fzf)'
 alias gt='GIT_TRACE=1'
@@ -46,10 +42,14 @@ add_script_to_alias()
     alias $1='. '$OMNIBASH_PATH'/scripts/'$1'.sh'
 }
 
+add_script_to_alias b
 add_script_to_alias cl
 add_script_to_alias cdpl
 add_script_to_alias cde
 add_script_to_alias dec
+add_script_to_alias e
+add_script_to_alias ef
+add_script_to_alias eg
 add_script_to_alias enc
 add_script_to_alias pjs
 add_script_to_alias ytb
