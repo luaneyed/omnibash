@@ -36,6 +36,7 @@ alias ya='yarn add'
 alias yc='yarn check'
 alias yi='yarn install'
 alias yr='yarn run'
+alias yt='yarn test'
 
 add_script_to_alias()
 {
