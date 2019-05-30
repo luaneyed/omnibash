@@ -35,6 +35,9 @@ alias gcl='. '$OMNIBASH_PATH'/git/gcl.sh'
 alias gcm='git commit -m'
 __git_complete gc _git_commit
 
+alias gcn='git clean'
+__git_complete gcn _git_clean
+
 alias gck='git checkout'
 __git_complete gck _git_checkout
 
