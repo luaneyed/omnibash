@@ -14,6 +14,8 @@ You must **not** edit the auto generated line in ~/.bash_profile
 ### Optional Dependencies ###
 - [bat](https://github.com/sharkdp/bat/blob/master/README.md#installation)
 - [exa](https://github.com/ogham/exa/blob/master/README.md#installation)
+- [lsd](https://github.com/Peltoche/lsd/blob/master/README.md#installation)
+- [nerd-fonts](https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md#font-installation)
 - [git](https://git-scm.com/downloads)
 - [docker](https://docs.docker.com/install/#supported-platforms)
 - [docker-compose](https://docs.docker.com/compose/install/#install-compose)
