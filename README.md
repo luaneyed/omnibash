@@ -23,4 +23,5 @@ You must **not** edit the auto generated line in ~/.bash_profile
 - [rust](https://www.rust-lang.org/tools/install)
 - [python](https://www.python.org/downloads/)
 - [yarn](https://yarnpkg.com/en/docs/install)
+- tmux
 
