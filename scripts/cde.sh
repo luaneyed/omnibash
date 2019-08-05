@@ -3,7 +3,7 @@
 original_pwd=$PWD
 
 cd ~/Code/$1
-ls
+e
 echo 'Enter path'
 read -e path
 if [ -n "$path" ]
