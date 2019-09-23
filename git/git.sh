@@ -44,6 +44,9 @@ __git_complete gck _git_checkout
 alias gck-='git checkout -'
 __git_complete gck- _git_checkout
 
+alias gcp='git cherry-pick'
+__git_complete gcp _git_cherry_pick
+
 alias gckm='git checkout master'
 __git_complete gckm _git_checkout
 
