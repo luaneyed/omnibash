@@ -47,6 +47,9 @@ __git_complete gck- _git_checkout
 alias gckm='git checkout master'
 __git_complete gckm _git_checkout
 
+alias gckv='git checkout development'
+__git_complete gckv _git_checkout
+
 alias gd='git diff'
 __git_complete gd _git_diff
 
@@ -58,6 +61,12 @@ __git_complete gdm _git_diff
 
 alias gdmn='git diff master --name-only'
 __git_complete gdmn _git_diff
+
+alias gdv='git diff development'
+__git_complete gdv _git_diff
+
+alias gdvn='git diff development --name-only'
+__git_complete gdvn _git_diff
 
 alias gds='git diff --staged'
 __git_complete gds _git_diff
@@ -95,6 +104,9 @@ __git_complete gm _git_merge
 alias gmm='git merge master'
 __git_complete gmm _git_merge
 
+alias gmv='git merge development'
+__git_complete gmv _git_merge
+
 alias gmt='git mergetool'
 __git_complete gmt _git_mergetool
 
@@ -114,6 +126,9 @@ __git_complete gri _git_rebase
 
 alias grm='git rebase master'
 __git_complete gri _git_rebase
+
+alias grv='git rebase development'
+__git_complete grv _git_rebase
 
 alias gs='git status'
 __git_complete gs _git_status
