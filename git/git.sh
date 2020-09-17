@@ -139,6 +139,8 @@ __git_complete gs _git_status
 alias gsh='git show'
 __git_complete gsh _git_show
 
+alias gshn='git show --name-only'
+
 alias gsm='git submodule'
 __git_complete gsm _git_submodule
 
