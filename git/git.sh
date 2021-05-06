@@ -113,7 +113,7 @@ __git_complete gmv _git_merge
 alias gmt='git mergetool'
 __git_complete gmt _git_mergetool
 
-alias gp='git pull'
+alias gp='git pull --ff-only'
 __git_complete gp _git_pull
 
 alias gpoh='git push origin HEAD'
