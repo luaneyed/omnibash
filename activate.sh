@@ -47,6 +47,7 @@ add_script_to_alias()
 
 add_script_to_alias b
 add_script_to_alias cde
+add_script_to_alias db
 add_script_to_alias dec
 add_script_to_alias e
 add_script_to_alias ef
