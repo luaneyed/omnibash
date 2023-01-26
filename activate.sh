@@ -1,6 +1,7 @@
 alias al='AWS_REGION=localhost'
 alias cb='cargo build'
 alias cc='cargo check'
+alias cf='cargo fmt'
 alias cr='cargo run'
 alias ct='cargo test'
 alias cdp='cd ..'
