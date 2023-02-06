@@ -50,7 +50,7 @@ __git_complete gcp _git_cherry_pick
 alias gckm='git checkout master'
 __git_complete gckm _git_checkout
 
-alias gckv='git checkout development'
+alias gckv='git checkout develop'
 __git_complete gckv _git_checkout
 
 alias gd='git diff'
