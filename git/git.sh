@@ -47,7 +47,7 @@ __git_complete gck- _git_checkout
 alias gcp='git cherry-pick'
 __git_complete gcp _git_cherry_pick
 
-alias gckm='git checkout master'
+alias gckm='git checkout main'
 __git_complete gckm _git_checkout
 
 alias gckv='git checkout develop'
@@ -59,10 +59,10 @@ __git_complete gd _git_diff
 alias gdh='git diff HEAD'
 __git_complete gdh _git_diff
 
-alias gdm='git diff master'
+alias gdm='git diff main'
 __git_complete gdm _git_diff
 
-alias gdmn='git diff master --name-only'
+alias gdmn='git diff main --name-only'
 __git_complete gdmn _git_diff
 
 alias gdv='git diff develop'
@@ -104,7 +104,7 @@ __git_complete gl7 _git_log
 alias gm='git merge'
 __git_complete gm _git_merge
 
-alias gmm='git merge master'
+alias gmm='git merge main'
 __git_complete gmm _git_merge
 
 alias gmv='git merge develop'
@@ -127,7 +127,7 @@ __git_complete gr _git_rebase
 alias gri='git rebase --interactive'
 __git_complete gri _git_rebase
 
-alias grm='git rebase master'
+alias grm='git rebase main'
 __git_complete gri _git_rebase
 
 alias grv='git rebase develop'
