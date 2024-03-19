@@ -17,10 +17,9 @@ You must **not** edit the auto generated line in ~/.bash_profile
 - [lsd](https://github.com/Peltoche/lsd/blob/master/README.md#installation)
 - [nerd-fonts](https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md#font-installation)
 - [git](https://git-scm.com/downloads)
-- [docker](https://docs.docker.com/install/#supported-platforms)
-- [docker-compose](https://docs.docker.com/compose/install/#install-compose)
-- [npm](https://github.com/creationix/nvm/blob/master/README.md#installation-and-update)
+- [rancher](https://github.com/rancher-sandbox/rancher-desktop/releases)
 - [rust](https://www.rust-lang.org/tools/install)
+- [node](https://github.com/Schniz/fnm/blob/master/README.md#installation)
 - [python](https://www.python.org/downloads/)
 - [yarn](https://yarnpkg.com/en/docs/install)
 - tmux
