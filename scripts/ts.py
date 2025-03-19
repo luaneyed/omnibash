@@ -2,8 +2,12 @@ import sys
 
 from datetime import datetime, UTC
 
-i = sys.argv[1]
 
+if len(sys.argv) < 2:
+    print(int(datetime.now(UTC).timestamp() * 1e9))
+    exit(0)
+
+i = sys.argv[1]
 
 if i.isdigit():
     """
