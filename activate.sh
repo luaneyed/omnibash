@@ -64,8 +64,9 @@ add_script_to_alias ef
 add_script_to_alias eg
 add_script_to_alias enc
 add_script_to_alias pjs
-add_script_to_alias ytb
+add_script_to_alias ts
 add_script_to_alias weather
+add_script_to_alias ytb
 
 unset add_script_to_alias
 
